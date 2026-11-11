@@ -131,6 +131,18 @@ public:
                  << " | Detalle: " << it->descripcionEstrategica << endl;
         }
     }
+// Filtroooooooo
+    void filtrarPorLegion(string nombreLegion) {
+        cout << "\n===== FILTRANDO EVENTOS DE LA LEGION: " << nombreLegion << " =====" << endl;
+        for (auto it = eventos.begin(); it != eventos.end(); ++it) {
+            if (it->nombreLegionAfectada == nombreLegion) {
+                cout << "Turno: " << it->idTurno 
+                     << " | Tropa: " << it->tipoTropa 
+                     << " | Bajas: " << it->cantidadBajas 
+                     << " | Detalle: " << it->descripcionEstrategica << endl;
+            }
+        }
+    }
 };
 
 // ================================== ESTRATEGIAS TÁCTICAS ===================================
